@@ -3,21 +3,36 @@
   <head>
     <title>Anagrams checker</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="stylesheet" href="https://pyscript.net/releases/2023.03.1/pyscript.css" />
+    <link rel="stylesheet" href="src/mystyle.css" />
     <script defer src="https://pyscript.net/releases/2023.03.1/pyscript.js"></script>
   </head>
   <body>
-    <h1>Anagrams checker</h1>
-    <p>Write something in the forms, missing letters will appear below.</p>
-    <label for="original">Original sentence </label>
-    <input type="text" id="original" py-keyup="do_check()"></input>
-    <label for="anagram">Anagrammed sentence </label>
-    <input type="text" id="anagram" py-keyup="do_check()"></input>
-    <p>Missing letters from original:</p>
-    <div id="orig_out"></div>
-    <p>Missing letters from anagram:</p>
-    <div id="anag_out"></div>
+    <div class="grid-container">
+      <div class="header">
+        <h1>Anagrams checker</h1>
+      </div>
+      <div class="summary">
+        <p>Write something in the forms, missing letters will appear below.</p>
+      </div>
+      <div class="left-input">
+        <label for="original">Original sentence </label>
+        <input type="text" id="original" py-keyup="do_check()"></input>
+      </div>
+      <div class="right-input">
+        <label for="anagram">Anagrammed sentence </label>
+        <input type="text" id="anagram" py-keyup="do_check()"></input>
+      </div>
+      <div class="left-output">
+        <p>Missing letters from original:</p>
+        <div id="orig_out"></div>
+      </div>
+      <div class="right-output">
+        <p>Missing letters from anagram:</p>
+        <div id="anag_out"></div>
+      </div>
+    </div>
     <py-config src="src/pyscript.toml"></py-config>
     <py-script src="src/main.py"></py-script>
   </body>
