@@ -15,17 +15,13 @@ input:focus {
   outline: 4px solid darkorange;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-areas: 
-    'header header'
-    'summary summary'
-    'left-input right-input'
-    'left-output right-output';
+.container {
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
-  grid-area: header;
+  flex: 20%;
   background-color: darkorange;
   padding: 30px;
   text-align: center;
@@ -33,40 +29,26 @@ input:focus {
 }
 
 .summary {
-  grid-area: summary;
+  flex: 10%;
   background-color: #f1f1f1;
   padding: 10px;
 }
 
-.left-input, .right-input,
-.left-output, .right-output {
+.main {
+  display: flex;
+  flex-direction: row;
+  flex: 70%;
+}
+
+.column {
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  flex: 50%;
 }
 
-.left-input {
-  grid-area: left-input;
-}
-
-.right-input {
-  grid-area: right-input;
-}
-
-.left-output {
-  grid-area: left-output;
-}
-
-.right-output {
-  grid-area: right-output;
-}
-
-@media (max-width: 600px) {
-  .grid-container {
-    grid-template-areas: 
-      'header header'
-      'summary summary'
-      'left-input left-input'
-      'left-output left-output'
-      'right-input right-input'
-      'right-output right-output';
+@media (max-width: 700px) {
+  .main {
+    flex-direction: column;
   }
 }

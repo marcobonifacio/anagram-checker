@@ -9,28 +9,26 @@
     <script defer src="https://pyscript.net/releases/2023.03.1/pyscript.js"></script>
   </head>
   <body>
-    <div class="grid-container">
+    <div class="container">
       <div class="header">
         <h1>Anagram Checker</h1>
       </div>
       <div class="summary">
         <p>Write something in the forms, missing letters will appear below.</p>
       </div>
-      <div class="left-input">
-        <label for="original">Original sentence </label>
-        <input type="text" id="original" py-keyup="do_check()"></input>
+      <div class="main">
+        <div class="column">
+          <label for="original">Original sentence </label>
+          <input type="text" id="original" py-keyup="do_check()"></input>
+          <p>Missing letters from original:</p>
+          <div id="orig_out"></div>
+        </div>
+        <div class="column">
+          <label for="anagram">Anagrammed sentence </label>
+          <input type="text" id="anagram" py-keyup="do_check()"></input>
+          <p>Missing letters from anagram:</p>
+          <div id="anag_out"></div>
       </div>
-      <div class="right-input">
-        <label for="anagram">Anagrammed sentence </label>
-        <input type="text" id="anagram" py-keyup="do_check()"></input>
-      </div>
-      <div class="left-output">
-        <p>Missing letters from original:</p>
-        <div id="orig_out"></div>
-      </div>
-      <div class="right-output">
-        <p>Missing letters from anagram:</p>
-        <div id="anag_out"></div>
       </div>
     </div>
     <py-config src="src/pyscript.toml"></py-config>
