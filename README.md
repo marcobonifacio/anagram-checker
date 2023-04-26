@@ -1,2 +1,2 @@
-# anagram-checker
- An anagram checker tool
+# Anagram Checker
+ An anagram checker tool, running in the browser with [PyScript](https://pyscript.net/).
